@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState, } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 
 const Bookdetails = () => {
-    const AllData = useLoaderData()
-    console.log(AllData)
-    const { ID } = useParams()
-    console.log(ID)
+    const [SelectedReadBook, setSelectedReadBook] = useState([])
+    const MarkReadHandler = (SelectedData) => {
+        const ExistedBook = SelectedReadBook.find((book) => book.bookId == SelectedData.bookId);
+        if (ExistedBook) {
+            alert("hi")
+        }
+        else {
+            setSelectedReadBook([...SelectedReadBook, SelectedData])
+        }
+    }
 
+    const AllData = useLoaderData()
+    const { ID } = useParams()
     const SelectedData = AllData.find((items) => items.bookId == ID)
-    // console.log(SelectedData)
     return (
         <>
             <div className="card lg:card-side shadow-sm max-w-11/12 mx-auto mt-14 gap-12 justify-between">
@@ -53,7 +60,7 @@ const Bookdetails = () => {
 
                     </div>
                     <div className="card-actions mt-8">
-                        <button className="btn btn-outline">Read</button>
+                        <button className="btn btn-outline" onClick={() => MarkReadHandler(SelectedData)}>Read</button>
                         <button className="btn text-white shadow-none outline-none border-none bg-[#50B1C9]">Wishlist</button>
                     </div>
                 </div>

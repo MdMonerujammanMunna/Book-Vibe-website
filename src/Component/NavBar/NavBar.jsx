@@ -9,7 +9,7 @@ const NavBar = () => {
         <li>
             <NavLink className={({ isActive }) => `font-semibold mr-4 ${(
                 isActive ? "text-green-400 border-2 border-green-400" : ""
-            )}`} to='/BookPage'>BookPage</NavLink></li>
+            )}`} to='/BookPage'>Listed Books</NavLink></li>
         <li>
             <NavLink className={({ isActive }) => `font-semibold mr-4 ${(
                 isActive ? "text-green-400 border-2 border-green-400" : ""
