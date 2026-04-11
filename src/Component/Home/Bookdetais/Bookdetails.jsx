@@ -1,17 +1,10 @@
-import React, { useState, } from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { BookContext } from '../../../Context/BookShear';
 
 const Bookdetails = () => {
-    const [SelectedReadBook, setSelectedReadBook] = useState([])
-    const MarkReadHandler = (SelectedData) => {
-        const ExistedBook = SelectedReadBook.find((book) => book.bookId == SelectedData.bookId);
-        if (ExistedBook) {
-            alert("hi")
-        }
-        else {
-            setSelectedReadBook([...SelectedReadBook, SelectedData])
-        }
-    }
+    const { MarkReadHandler, SelectedReadBook } = useContext(BookContext)
+    console.log(MarkReadHandler, SelectedReadBook)
 
     const AllData = useLoaderData()
     const { ID } = useParams()
