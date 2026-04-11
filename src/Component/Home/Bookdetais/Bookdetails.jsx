@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import { BookContext } from '../../../Context/BookShear';
 
 const Bookdetails = () => {
-    const { MarkReadHandler, SelectedReadBook } = useContext(BookContext)
+    const { MarkReadHandler, SelectedReadBook, MarkWishHandler } = useContext(BookContext)
     console.log(MarkReadHandler, SelectedReadBook)
 
     const AllData = useLoaderData()
@@ -54,7 +54,7 @@ const Bookdetails = () => {
                     </div>
                     <div className="card-actions mt-8">
                         <button className="btn btn-outline" onClick={() => MarkReadHandler(SelectedData)}>Read</button>
-                        <button className="btn text-white shadow-none outline-none border-none bg-[#50B1C9]">Wishlist</button>
+                        <button className="btn text-white shadow-none outline-none border-none bg-[#50B1C9]" onClick={() => MarkWishHandler(SelectedData)}>Wishlist</button>
                     </div>
                 </div>
             </div>
