@@ -2,7 +2,7 @@ import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { MdGroups2 } from "react-icons/md";
 import { MdOutlineAnalytics } from "react-icons/md";
-const BookWish = ({Wish}) => {
+const BookWish = ({ Wish }) => {
     return (
         <>
             <div className="card lg:card-side bg-base-100 shadow-sm my-12 mx-20 flex items-center ">

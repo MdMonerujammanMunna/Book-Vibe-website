@@ -1,9 +1,13 @@
 import React from 'react';
+import ChartData from './ChartData';
 
-const Meter = () => {
+const Meter = ({ MeterPage }) => {
+
     return (
         <>
-            Meter On
+            <div className="container mx-auto my-9">
+                <ChartData MeterPage={MeterPage}></ChartData>
+            </div>
         </>
     );
 };

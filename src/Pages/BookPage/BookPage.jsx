@@ -4,7 +4,7 @@ import Bookhave from './Bookhave';
 import BookWish from './BookWish';
 
 const BookPage = () => {
-    const { SelectedReadBook } = useContext(BookContext)
+    const { SelectedReadBook, WishReadBook } = useContext(BookContext)
     const [ToggleForselected, setToggleForselected] = useState("Read")
     return (
         <>
@@ -27,7 +27,7 @@ const BookPage = () => {
                     :
                     <>
                         <div>
-                            {SelectedReadBook.map((Wish, index) => <BookWish Wish={Wish} key={index}></BookWish>)}
+                            {WishReadBook.map((Wish, index) => <BookWish Wish={Wish} key={index}></BookWish>)}
                         </div >
                     </>
             }
