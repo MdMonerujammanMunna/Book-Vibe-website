@@ -1,39 +1,42 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
 import { Bar, CartesianGrid, ComposedChart, Legend, Line, Tooltip, XAxis, YAxis } from 'recharts';
 const ChartData = () => {
-    const AllData = useLoaderData()
-    {
-        AllData.map(item => item)
-    }
     const data = [
         {
-            name: 'Page A',
-            uv: 5, //purple line
+            name: 'The Great Gatsby',
+            Pages: 192, //purple line
         },
         {
-            name: 'Page B',
-            uv: 868,
+            name: 'To Kill a Mockingbird',
+            Pages: 281, //purple line
         },
         {
-            name: 'Page C',
-            uv: 1397,
-
+            name: '1984',
+            Pages: 328, //purple line
         },
         {
-            name: 'Page D',
-            uv: 1480,
-
+            name: 'The Catcher in the Rye',
+            Pages: 224, //purple line
         },
         {
-            name: 'Page E',
-            uv: 1520,
-
+            name: 'Pride and Prejudice',
+            Pages: 279, //purple line
         },
         {
-            name: 'Page F',
-            uv: 1400,
-
+            name: 'The Hobbit',
+            Pages: 310, //purple line
+        },
+        {
+            name: 'Harry Potter and the Sorcerer Stone',
+            Pages: 309, //purple line
+        },
+        {
+            name: 'The Alchemist',
+            Pages: 177, //purple line
+        },
+        {
+            name: 'The Girl on the Train',
+            Pages: 316, //purple line
         },
     ];
     return (
@@ -55,9 +58,7 @@ const ChartData = () => {
                     <YAxis width="auto" />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="uv" barSize={20} fill="#413ea0" />
-                    <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-
+                    <Bar dataKey="Pages" barSize={20} fill="#413ea0" />
                 </ComposedChart>
             </div>
         </>

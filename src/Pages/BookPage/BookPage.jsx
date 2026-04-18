@@ -5,6 +5,7 @@ import BookWish from './BookWish';
 
 const BookPage = () => {
     const { SelectedReadBook, WishReadBook } = useContext(BookContext)
+    console.log(SelectedReadBook)
     const [ToggleForselected, setToggleForselected] = useState("Read")
     return (
         <>
